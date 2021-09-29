@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Shelter list
+{% endblock %}
+
+{% block content %}
+<h2>{{ dog.name }}</h2>
+<div>Located at <a href="{% url 'shelter_detail' shelter.id %}">{{shelter.name}}</a></div>
+{% if shelter.dog_set.all %}
+    <div>
+        Description: {{dog.description}}
+    </div>
+    <div>
+        Intake date: {{dog.intake_date}}
+    </div>
+    </div>
+{% else %}
+    <div>This dog is no longer available for adoption</div>
+{% endif %}
+{% endblock %}

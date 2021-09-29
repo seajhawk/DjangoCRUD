@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Dog list
+{% endblock %}
+
+{% block content %}
+<h2>Dog list</h2>
+<div>Here is the list of all dogs</div>
+    {% for dog in dogs %}
+        <div>
+            Dog - 
+            <a href="{% url 'dog_detail' dog.id %}">
+                {{dog.name}}
+            </a>
+             - at 
+            <a href="{% url 'shelter_detail' dog.shelter_id %}">
+                {{dog.shelter}}
+            </a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
