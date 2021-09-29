@@ -3,3 +3,4 @@ pylint
 autopep8
 django-crispy-forms
 djangorestframework
+django-cors-headers

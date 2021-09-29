@@ -1,3 +1,9 @@
+# Custom Additions
+- Rest API
+[DjangoRestFramework](https://www.django-rest-framework.org/)
+
+[Django: POST, PUT, GET, DELETE requests example | Rest Apis](https://www.bezkoder.com/django-rest-api/#:~:text=Step%20by%20step%20to%20implement%20%EE%80%80Django%EE%80%81%20%EE%80%80Rest%EE%80%81%20%EE%80%80Api%EE%80%81.,for%20handling%20all%20CRUD%20operations%20%28including%20custom%20finder%29.)
+
 
 # Contributing
 
@@ -29,3 +35,5 @@ Privacy information can be found at https://privacy.microsoft.com/en-us/
 
 Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
 or trademarks, whether by implication, estoppel or otherwise.
+
+
