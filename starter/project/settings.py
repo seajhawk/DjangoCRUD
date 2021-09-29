@@ -62,7 +62,7 @@ MIDDLEWARE = [
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     #[TODO] - May need to update this on deploy to Azure
-    'http://localhost:8081',
+    'http://localhost:8000',
 )
 
 ROOT_URLCONF = 'project.urls'

@@ -1,4 +1,5 @@
 from django.urls import path
+from django.urls.conf import re_path
 from django.urls.resolvers import URLPattern
 from . import views
 
@@ -10,5 +11,10 @@ urlpatterns = [
     path('dog_list', views.DogListView.as_view(), name='dog_list'),
     path('dog/register', views.DogCreateView.as_view(), name='dog_register'),
     path('dog/delete/<int:pk>', views.DogDeleteView.as_view(), name='dog_delete'),
+    
+    # API
+    path('api/shelter_list', views.api_shelter),
+    path('api/shelter', views.api_shelter),
+    path('api/shelter/<int:pk>', views.api_shelter),
 ]
 
