@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1163fbbe-27e7-4b0f-8466-195fe5417043/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/CHarris-DjangoCRUD-20210930",
+    "appService.deploySubpath": "."
+}

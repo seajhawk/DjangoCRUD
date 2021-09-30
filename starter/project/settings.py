@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +27,10 @@ SECRET_KEY = '$3ln#6mdar*akl5d#1-9%jk$gks^q&3^b&934b)6vso1l$#cut'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+# Override settings as needed when the app runs in production
+if 'WEBSITE_HOSTNAME' in os.environ: # Running on Azure
+    from .azure import *
 
 
 # Application definition
@@ -44,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'uritemplate',
+    'rest_framework',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

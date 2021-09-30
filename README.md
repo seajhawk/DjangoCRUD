@@ -1,11 +1,14 @@
 # Custom Additions
-- Rest API
+- Add REST API
 [DjangoRestFramework](https://www.django-rest-framework.org/)
 
 [Django: POST, PUT, GET, DELETE requests example | Rest Apis](https://www.bezkoder.com/django-rest-api/#:~:text=Step%20by%20step%20to%20implement%20%EE%80%80Django%EE%80%81%20%EE%80%80Rest%EE%80%81%20%EE%80%80Api%EE%80%81.,for%20handling%20all%20CRUD%20operations%20%28including%20custom%20finder%29.)
 
+# Things I want to figure out
+- 
 
-# Contributing
+# Base project
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
@@ -19,7 +22,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-# Legal Notices
+## Legal Notices
 
 Microsoft and any contributors grant you a license to the Microsoft documentation and other content
 in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),

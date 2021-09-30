@@ -4,3 +4,7 @@ autopep8
 django-crispy-forms
 djangorestframework
 django-cors-headers
+
+# Added for running in Production
+whitenoise
+psycopg2-binary

@@ -2,6 +2,7 @@ from django.urls import path
 from django.urls.conf import re_path
 from django.urls.resolvers import URLPattern
 from . import views
+from rest_framework.schemas import get_schema_view
 
 urlpatterns = [
     path('', views.shelter_list, name='shelter_list'),
@@ -16,5 +17,6 @@ urlpatterns = [
     path('api/shelter_list', views.api_shelter),
     path('api/shelter', views.api_shelter),
     path('api/shelter/<int:pk>', views.api_shelter),
+    path('schema/', get_schema_view())
 ]
 
