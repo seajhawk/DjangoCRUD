@@ -8,7 +8,7 @@
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}\\starter\\manage.py",
+            "program": "${workspaceFolder}\\my_shelter\\manage.py",
             "args": [
                 "runserver"
             ],
