@@ -3,6 +3,8 @@ from . import models
 from django.views import generic
 from django.urls.base import reverse_lazy
 
+import os
+
 # API
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser 
@@ -13,7 +15,11 @@ from rest_framework.decorators import api_view
 
 def shelter_list(request):
     shelters = models.Shelter.objects.all()
-    context = {'shelters': shelters}
+    context = {
+        'shelters': shelters, 
+        'debug_DBENGINE': os.environ['debug_DBENGINE'], 
+        'debug_INAZURE': os.environ.get('debug_INAZURE', 'False')
+    }
     return render(request, 'shelter_list.html', context)
 
 def shelter_detail(request, pk):

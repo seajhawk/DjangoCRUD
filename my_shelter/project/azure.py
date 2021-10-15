@@ -1,5 +1,8 @@
-from .settings import *
+# from .settings import *
 import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Azure App Service automatically creates an environmental variable named WEBSITE_HOSTNAME. 
 # This variable contains the URL for your website. You can use this variable to determine 
@@ -13,11 +16,13 @@ DATABASES = {
         'ENGINE'  : 'django.db.backends.postgresql',
         'NAME'    : os.environ['DBNAME'],
         'HOST'    : hostname + ".postgres.database.azure.com",
-        'USER'    : os.environ['DBUSER'] + '@' + hostname,
-        'PASSWORD': os.environ['DBPASS']
+        'USER'    : os.environ['DBUSER'],
+        'PASSWORD': os.environ['DBPASS'],
+        'OPTIONS': {'sslmode': 'require'}
     }
 }
 
+os.environ['debug_DBENGINE'] = DATABASES['default']['ENGINE']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

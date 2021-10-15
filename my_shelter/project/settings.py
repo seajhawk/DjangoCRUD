@@ -28,10 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# Override settings as needed when the app runs in production
-if 'WEBSITE_HOSTNAME' in os.environ: # Running on Azure
-    from .azure import *
-
 
 # Application definition
 
@@ -102,6 +98,8 @@ DATABASES = {
     }
 }
 
+os.environ['debug_DBENGINE'] = DATABASES['default']['ENGINE']
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -140,3 +138,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Override settings as needed when the app runs in production
+if 'WEBSITE_HOSTNAME' in os.environ: # Running on Azure
+    os.environ['debug_INAZURE']='True'
+    from .azure import *
+
